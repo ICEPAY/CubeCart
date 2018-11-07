@@ -37,7 +37,7 @@ function iceTranslate($key) {
 if (!defined('CC_INI_SET'))
     die('Access Denied');
 
-require(realpath(dirname(dirname(__FILE__))) . '/api/icepay_api_basic.php');
+require(realpath(dirname(dirname(__FILE__))) . '/api/src/icepay_api_basic.php');
 
 $module = new Module(__FILE__, $_GET['module'], 'admin/index.tpl', true, false);
 

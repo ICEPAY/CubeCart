@@ -7,7 +7,7 @@
  * UK Private Limited Company No. 5323904
  * ========================================
  * Web:   http://www.cubecart.com
- * Email:  sales@devellion.com
+     * Email:  sales@devellion.com
  * License:  GPL-2.0 http://opensource.org/licenses/GPL-2.0
  */
 define('ICEPAY_VERSION', '1.0.1');
@@ -18,7 +18,7 @@ class Gateway {
     private $_basket;
 
     public function __construct($module = false) {
-        require(realpath(dirname(__FILE__)) . '/api/icepay_api_basic.php');
+        require(realpath(dirname(__FILE__)) . '/api/src/icepay_api_basic.php');
 
         $this->_module = $module;
         $this->_basket = & $GLOBALS['cart']->basket;
