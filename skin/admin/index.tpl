@@ -9,6 +9,12 @@
  * Web:   http://www.cubecart.com
  * Email:  sales@devellion.com
  * License:  GPL-2.0 http://opensource.org/licenses/GPL-2.0
+ *
+ *
+ *
+ * Copyright (C) 2018 ICEPAY B.V.
+ * based on code by CubeCart Limited copyright (C) 2014
+ * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
  */
 ?>
 <form action="{$VAL_SELF}" method="post" enctype="multipart/form-data">
@@ -75,11 +81,6 @@ In the special case you want to offer one single payment method, you can select 
                 <label for="icepay-customdescription" style="padding-top: 10px;">Description on transaction statement of customer</label>
                 <input type="text" name="module[customdescription]" id="icepay-customdescription" value="{$MODULE.customdescription}" style="padding: 5px; width: 330px;" />
                 <div style="font-style: italic; margin-left: 5px; font-size: 11px;">&#187; Some payment methods allow customized descriptions on the transaction statement. If left empty the Order ID is used. (Max 100 char.)</div>
-            </div>
-            <div style="margin: 15px 0;">
-                <label for="icepay-customiprange" style="padding-top: 10px;">Custom IP Range for IP Check for Postbackk</label>
-                <input type="text" name="module[customiprange]" id="icepay-customiprange" value="{$MODULE.customiprange}" style="padding: 5px; width: 330px;" />
-                <div style="font-style: italic; margin-left: 5px; font-size: 11px;">&#187; For example a proxy: 1.222.333.444-100.222.333.444 For multiple ranges use a , seperator: 2.2.2.2-5.5.5.5,8.8.8.8-9.9.9.9</div>
             </div>
             <div style="margin: 15px 0;">
                 <label for="icepay-logging">Enable logging</label>

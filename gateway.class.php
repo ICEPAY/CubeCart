@@ -159,9 +159,6 @@ class Gateway {
         }
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            // Set IP check to true and add custom ip's to the whitelist
-            $icepay->doIPCheck(true)
-                    ->addToWhitelist($this->_module['customiprange']);
 
             if ($this->_module['logging']) {
                 $logger = Icepay_Api_Logger::getInstance();
