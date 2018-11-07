@@ -9,19 +9,27 @@
  * Web:   http://www.cubecart.com
  * Email:  sales@devellion.com
  * License:  GPL-2.0 http://opensource.org/licenses/GPL-2.0
+
+
+ *
+ * Copyright (C) 2018 ICEPAY B.V.
+ * based on code by CubeCart Limited copyright (C) 2014
+ * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
+ *
+
 -->
 <installer version="1.0">
   <info>
-	<uid>icepay@cubecart.com</uid>
+	<uid>modules@icepay.com</uid>
 	<type>gateway</type>
 	<mobile_optimized>false</mobile_optimized>
-	<name><![CDATA[IcePay]]></name>
-	<description><![CDATA[IcePay Payment Gateway]]></description>
+	<name><![CDATA[ICEPAY]]></name>
+	<description><![CDATA[ICEPAY Payment Gateway]]></description>
 	<version>1.0.0</version>
 	<minVersion>5.0.0a</minVersion>
-	<maxVersion>5.1.*</maxVersion>
-	<creator><![CDATA[CubeCart]]></creator>
-	<homepage><![CDATA[http://www.cubecart.com]]></homepage>
+	<maxVersion>6.2.*</maxVersion>
+	<creator><![CDATA[ICEPAY]]></creator>
+	<homepage><![CDATA[https://github.com/ICEPAY/CubeCart]]></homepage>
 	<block>false</block>
   </info>
 </installer>
