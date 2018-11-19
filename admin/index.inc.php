@@ -9,6 +9,12 @@
  * Web:   http://www.cubecart.com
  * Email:  sales@devellion.com
  * License:  GPL-2.0 http://opensource.org/licenses/GPL-2.0
+ *
+ *
+ *
+ * Copyright (C) 2018 ICEPAY B.V.
+ * based on code by CubeCart Limited copyright (C) 2014
+ * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
  */
 function iceTranslate($key) {
     // TO-DO use Cubecart's translate
@@ -37,7 +43,7 @@ function iceTranslate($key) {
 if (!defined('CC_INI_SET'))
     die('Access Denied');
 
-require(realpath(dirname(dirname(__FILE__))) . '/api/icepay_api_basic.php');
+require(realpath(dirname(dirname(__FILE__))) . '/api/src/icepay_api_basic.php');
 
 $module = new Module(__FILE__, $_GET['module'], 'admin/index.tpl', true, false);
 

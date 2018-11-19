@@ -9,8 +9,14 @@
  * Web:   http://www.cubecart.com
  * Email:  sales@devellion.com
  * License:  GPL-2.0 http://opensource.org/licenses/GPL-2.0
+ *
+ *
+ *
+ * Copyright (C) 2018 ICEPAY B.V.
+ * based on code by CubeCart Limited copyright (C) 2014
+ * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
  */
-define('ICEPAY_VERSION', '1.0.1');
+define('ICEPAY_VERSION', '1.1.0');
 
 class Gateway {
 
@@ -18,7 +24,7 @@ class Gateway {
     private $_basket;
 
     public function __construct($module = false) {
-        require(realpath(dirname(__FILE__)) . '/api/icepay_api_basic.php');
+        require(realpath(dirname(__FILE__)) . '/api/src/icepay_api_basic.php');
 
         $this->_module = $module;
         $this->_basket = & $GLOBALS['cart']->basket;
@@ -153,9 +159,6 @@ class Gateway {
         }
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            // Set IP check to true and add custom ip's to the whitelist
-            $icepay->doIPCheck(true)
-                    ->addToWhitelist($this->_module['customiprange']);
 
             if ($this->_module['logging']) {
                 $logger = Icepay_Api_Logger::getInstance();
@@ -228,7 +231,7 @@ class Gateway {
 
                     if ($icepay->validateVersion()) {
                         $dump["additional"] = array(
-                            "Cubecart" => '5' // CMS name & version                            
+                            "Cubecart" => '>=5' // CMS name & version
                         );
                     } else {
                         $dump["notice"] = "Checksum failed! Merchant ID and Secret code probably incorrect.";
