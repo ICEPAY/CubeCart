@@ -16,7 +16,7 @@
  * based on code by CubeCart Limited copyright (C) 2014
  * License: http://www.gnu.org/licenses/gpl.html GPL version 2 or higher
  */
-define('ICEPAY_VERSION', '1.0.1');
+define('ICEPAY_VERSION', '1.1.0');
 
 class Gateway {
 
@@ -231,7 +231,7 @@ class Gateway {
 
                     if ($icepay->validateVersion()) {
                         $dump["additional"] = array(
-                            "Cubecart" => '5' // CMS name & version                            
+                            "Cubecart" => '>=5' // CMS name & version
                         );
                     } else {
                         $dump["notice"] = "Checksum failed! Merchant ID and Secret code probably incorrect.";

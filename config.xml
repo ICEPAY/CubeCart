@@ -25,7 +25,7 @@
 	<mobile_optimized>false</mobile_optimized>
 	<name><![CDATA[ICEPAY]]></name>
 	<description><![CDATA[ICEPAY Payment Gateway]]></description>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 	<minVersion>5.0.0a</minVersion>
 	<maxVersion>6.2.*</maxVersion>
 	<creator><![CDATA[ICEPAY]]></creator>
